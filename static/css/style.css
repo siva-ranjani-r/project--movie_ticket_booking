@@ -7,7 +7,7 @@
 body {
     font-family: 'Lato', sans-serif;
     background: linear-gradient(rgba(0, 18, 50, 0.84), rgba(0, 0, 0, 0.95)),
-        url("./lloyd-dirks-4SLz_RCk6kQ-unsplash.jpg") bottom;
+        url("./static/lloyd-dirks-4SLz_RCk6kQ-unsplash.jpg") bottom;
     background-size: cover;
     color: #fff;
     display: flex;
@@ -72,7 +72,6 @@ body {
 
 .seat.selected {
     background-color: #6feaf6;
-    background-color: #31d7a9;
 }
 
 .seat.occupied {

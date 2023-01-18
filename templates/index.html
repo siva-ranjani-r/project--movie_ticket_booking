@@ -3,17 +3,14 @@
 
 <head>
     <title>Movie Seat Booking</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
     <div class="movie-container">
         <label>Pick a movie:</label>
         <select id="movie">
-            <option value="850">Varisu (₹850)</option>
-            <option value="950">Thunivu (₹950)</option>
-            <option value="550">Master (₹550)</option>
-            <option value="750">Docter (₹750)</option>
+            <option value="850" id="movie1">Varisu (₹850)</option>
         </select>
     </div>
 
@@ -34,11 +31,11 @@
 
     <div class="container">
         <div class="movie-screen">
-            <img src='screen-thumb.png' alt='screen' />
+            <img src='static/screen-thumb.png' alt='screen' />
         </div>
 
         <div class="row-container">
-            <div class="row">
+            <div class="row" id="row1" >
                 <div class="seat"></div>
                 <div class="seat"></div>
                 <div class="seat"></div>
@@ -118,8 +115,8 @@
         </div>
 
     </div>
-
-    <script src='script.js'></script>
+    
+    <script  src='static/js/script.js'></script>
 </body>
 
 </html>
