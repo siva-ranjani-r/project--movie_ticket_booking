@@ -30,11 +30,15 @@ def fun():
 
     return render_template("login.html")
 
-@app.route("/signUp")
+@app.route("/signUp",methods=['POST','GET'])
 def signUp():
     return render_template("signUp.html")
 
-@app.route("/home")
+@app.route("/logIn",methods=['POST','GET'])
+def logIn():
+    return render_template("login.html")
+
+@app.route("/home",methods=['POST','GET'])
 def fun1():
     return render_template("index.html")
 
