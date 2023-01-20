@@ -5,7 +5,8 @@ for(var i = 0; i < squareRef.length; i++) {
 }
 
 function changeColor(event) {
-    event.target.style.backgroundColor = "#6feaf6";
+    event.target.style.color = "red";
+    location.replace("")
     Selected_Seats+=1;
     price+=850
     x=document.getElementById("count")

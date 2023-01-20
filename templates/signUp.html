@@ -2,16 +2,17 @@
 <html>
     <head>
         <title>signup</title>
-        <link href="/static/css/style.css" rel="stylesheet">
+        <link href="static/css/style.css" rel="stylesheet">
     </head>
     <body>
         <div class="container1">
-            <form class="flex1" method="post" action="/logIn">
+            <form class="flex1" method="post" action="/">
                 <h1 class="dark">SignUp</h1>
-                <input class="input" name="Username" id="un" required="1" placeholder="Enter the name"></input><br><br>
-                <input class="input" name="Mobile_number" id="em" required="1" placeholder="Enter the mobile number"></input><br><br>
-                <input class="input" name="password" id="pw" required="1" placeholder="Enter the pasword"></input><br><br>
-                <input type="submit"></input><br><br>
+                <input class="input" name="username" id="un" required="1" placeholder="enter username"></input><br><br>
+                <input class="input" name="mobile"  id="m" required="1" placeholder="enter mobile"></input><br><br>
+                <input class="input" name="password" id="pw" required="1" placeholder="enter password"></input><br><br>
+                <button type="submit">create</button><br>
+                <h5 class="text">already have an account? <a href="/" class="but">LogIn</a></h5>
             </form>
         </div>
     </body>

@@ -3,18 +3,17 @@ import sqlite3 as sql
 
 app=Flask("__name__")
 
-
-@app.route("/",methods=["POST","GET"])
-def fun():
+@app.route("/",methods=["post","get"])
+def logIn():
     if request.form.get("username")!=None:
-        Username=request.form.get("Username")
-        Mobile_number=request.form.get("Mobile_number")
+        username=request.form.get("username")
+        mobile=request.form.get("mobile")
         password=request.form.get("password")
 
         conn=sql.connect("data.db")
         cur=conn.cursor()
 
-        cur.execute("select username from data1")
+        cur.execute("select mobile from user")
         data=cur.fetchall()
 
         l=[]
@@ -22,25 +21,40 @@ def fun():
             l.append(i[0])
 
         for i in l:
-            if i==Username:
+            if i==mobile:
                 return redirect(url_for("signUp"))
-
-        cur.execute("insert into data1 (Username,Mobile_number,password) values (?,?,?)",(Username,Mobile_number,password))
+        cur.execute("insert into user (username,mobile,password) values (?,?,?)",(username,mobile,password))
         conn.commit()
 
     return render_template("login.html")
 
-@app.route("/signUp",methods=['POST','GET'])
+@app.route("/signup")
 def signUp():
-    return render_template("signUp.html")
+    return render_template("signup.html")
 
-@app.route("/logIn",methods=['POST','GET'])
-def logIn():
-    return render_template("login.html")
+@app.route("/home",methods=["post","get"])
+def home():
+    username=request.form.get("username")
+    mobile=request.form.get("mobile")
+    password=request.form.get("password")
+    conn=sql.connect("data.db")
+    cur=conn.cursor()
+    cur.execute("select username,mobile,password from user")
+    data=cur.fetchall()
 
-@app.route("/home",methods=['POST','GET'])
-def fun1():
-    return render_template("index.html")
+    for i in data:
+        if i[0]==username and i[1]==mobile and i[2]==password:
+            
+            conn=sql.connect("data.db")
+            cur=conn.cursor()
+            cur.execute("delete from loginuser")
+            conn.commit()
+            cur.execute("insert into loginuser (mobile) values (?)",(mobile,))
+            conn.commit()
+            return render_template("index.html",mobile=mobile)
+    
+    else:
+        return redirect(url_for("logIn"))
 
 if __name__=="__main__":
     app.run(debug=True)
