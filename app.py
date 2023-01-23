@@ -44,7 +44,6 @@ def home():
 
     for i in data:
         if i[0]==username and i[1]==mobile and i[2]==password:
-            
             conn=sql.connect("data.db")
             cur=conn.cursor()
             cur.execute("delete from loginuser")
@@ -52,7 +51,6 @@ def home():
             cur.execute("insert into loginuser (mobile) values (?)",(mobile,))
             conn.commit()
             return render_template("index.html",mobile=mobile)
-    
     else:
         return redirect(url_for("logIn"))
 
