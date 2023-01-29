@@ -32,90 +32,91 @@
 
     <div class="container">
         <div class="movie-screen">
-            <img src='static/screen-thumb.png' alt='screen' />
+            <img src='/static/screen-thumb.png' alt='screen' />
         </div>
 
         <div class="row-container">
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+            <div class="row" id="gold1">
+                <div class="seat" id="seat-1"></div>
+                <div class="seat" id="seat-2"></div>
+                <div class="seat" id="seat-3"></div>
+                <div class="seat" id="seat-4"></div>
+                <div class="seat" id="seat-5"></div>
+                <div class="seat" id="seat-6"></div>
+                <div class="seat" id="seat-7"></div>
+                <div class="seat" id="seat-8"></div>
             </div>
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+            <div class="row" id="gold2">
+                <div class="seat" id="seat-9"></div>
+                <div class="seat" id="seat-10"></div>
+                <div class="seat" id="seat-11"></div>
                 <div class="seat occupied"></div>
                 <div class="seat occupied"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+                <div class="seat" id="seat-12"></div>
+                <div class="seat" id="seat-13"></div>
+                <div class="seat" id="seat-14"></div>
             </div>
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+            <div class="row" id="gold3">
+                <div class="seat" id="seat-15"></div>
+                <div class="seat" id="seat-16"></div>
+                <div class="seat" id="seat-17"></div>
+                <div class="seat" id="seat-18"></div>
+                <div class="seat" id="seat-19"></div>
+                <div class="seat" id="seat-20"></div>
                 <div class="seat occupied"></div>
                 <div class="seat occupied"></div>
             </div>
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+            <div class="row" id="gold4">
+                <div class="seat" id="seat-21"></div>
+                <div class="seat" id="seat-22"></div>
+                <div class="seat" id="seat-23"></div>
+                <div class="seat" id="seat-24"></div>
+                <div class="seat" id="seat-25"></div>
+                <div class="seat" id="seat-26"></div>
+                <div class="seat" id="seat-28"></div>
+                <div class="seat" id="seat-29"></div>
             </div>
-            <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+            <div class="row" id="gold5">
+                <div class="seat" id="seat-30"></div>
+                <div class="seat" id="seat-31"></div>
+                <div class="seat" id="seat-32"></div>
                 <div class="seat occupied"></div>
                 <div class="seat occupied"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+                <div class="seat" id="seat-33"></div>
+                <div class="seat" id="seat-34"></div>
+                <div class="seat" id="seat-35"></div>
             </div>
             <h5 class='subtitle'>GOLD - ₹650</h5>
             <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+                <div class="seat" id="seat-36"></div>
+                <div class="seat" id="seat-37"></div>
+                <div class="seat" id="seat-38"></div>
+                <div class="seat" id="seat-39"></div>
+                <div class="seat" id="seat-40"></div>
+                <div class="seat" id="seat-41"></div>
+                <div class="seat" id="seat-42"></div>
+                <div class="seat" id="seat-43"></div>
             </div>
             <div class="row">
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
-                <div class="seat"></div>
+                <div class="seat" id="seat-44"></div>
+                <div class="seat" id="seat-45"></div>
+                <div class="seat" id="seat-46"></div>
+                <div class="seat" id="seat-47"></div>
                 <div class="seat occupied"></div>
                 <div class="seat occupied"></div>
                 <div class="seat occupied"></div>
-                <div class="seat"></div>
+                <div class="seat" id="seat-48"></div>
             </div>
             <h5 class='subtitle'>DIAMOND - ₹850</h5>
 
             <div class="text-wrapper">
-                <p class="text">Selected Seats <span id='count'>0</span>
-                    <p class="text">Total Price ₹<span id="total">0</span></p>
+                <p class="text" id="ticket-count">Selected Seats <span id='count'>0</span>
+                    <p class="text" id="ticket-amount">Total Amount ₹<span id="total">0</span></p>
             </div>
         </div>
 
     </div>
+    <script src="/static/js/script.js"></script>
 </body>
 
 </html>
