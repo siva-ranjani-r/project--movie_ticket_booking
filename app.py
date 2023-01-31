@@ -1,7 +1,7 @@
 from flask import Flask,render_template,url_for,redirect,request
 import sqlite3 as sql
 
-app=Flask("__name__")
+app=Flask(__name__)
 
 @app.route("/",methods=["post","get"])
 def logIn():
